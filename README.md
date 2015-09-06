@@ -20,7 +20,7 @@ npm install tingle-on-off-field --save
 
 ## Simple Usage
 
-```
+```js
 class Demo extends React.Component {
     constructor(props) {
         super(props);

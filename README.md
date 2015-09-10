@@ -1,16 +1,8 @@
-# tingle-on-off-field
-
-[![npm version](https://badge.fury.io/js/tingle-on-off-field.svg)](http://badge.fury.io/js/tingle-on-off-field)
+# tingle-on-off-field [![npm version](https://badge.fury.io/js/tingle-on-off-field.svg)](http://badge.fury.io/js/tingle-on-off-field)
 
 The `OnOffField Component` for tinglejs
 
----
-
-## TL;DR
-
-效果图:
-
-![效果图](http://gtms02.alicdn.com/tps/i2/TB1x_uQJpXXXXcbXFXXOaDgVVXX-282-128.jpg)
+<img src="https://img.alicdn.com/tps/TB1r7HSJpXXXXceXFXXXXXXXXXX-750-1254.png" width="375"/>
 
 ## Install
 
@@ -25,19 +17,26 @@ class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            on:false
+            on: true,
+            on1: false,
+            on2: true,
+            on3: false
         }
     }
-    handleChange(on) {
-        this.setState ({
-            on:on
+
+    handleChange(key,value) {
+        this.setState({
+            [key]: value
         })
     }
     render() {
         return (
             <div>
-                 <GroupList title="Label文字长度测试">
-                    <OnOffField label="显示On Off" on={this.state.on} onChange={this.handleChange.bind(this)}/>
+                 <GroupList title="开关控件">
+                    <OnOffField label="默认选中" on={this.state.on} onChange={this.handleChange.bind(this,'on')}/>
+                    <OnOffField label="默认没选中" on={this.state.on1} onChange={this.handleChange.bind(this,'on1')}/>
+                    <OnOffField label="不可选" on={this.state.on2} readOnly={true} onChange={this.handleChange.bind(this,'on2')}/>
+                    <OnOffField label="不可选" on={this.state.on3} readOnly={true} onChange={this.handleChange.bind(this,'on3')}/>
                 </GroupList>
             </div>
         );

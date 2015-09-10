@@ -1,9 +1,12 @@
-.tOnOffField {
-  height: 44px;
-}
-.tFieldLabel {
-  padding: 12px 0;
-  width: 60px;
+/**
+ * OnOff Component Style for tingle
+ * @author ruiyang.dry
+ *
+ * Copyright 2014-2015, Tingle Team, Alinw.
+ * All rights reserved.
+ */
+.tOnOffField .tOnOffPanel {
+  margin-right: -5px;
 }
 
 /*# sourceMappingURL=OnOffField.css.map */

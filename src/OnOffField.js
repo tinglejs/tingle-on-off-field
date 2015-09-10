@@ -1,11 +1,12 @@
 /**
  * OnOffField Component for tinglejs
- * @auther ruiyang.dry
+ * @author ruiyang.dry
  *
  * Copyright 2014-2015, Tingle Team, Alinw.
  * All rights reserved.
  */
 let OnOff = require('tingle-on-off');
+let Field = require('tingle-field');
 let classnames = require('classnames');
 class OnOffField extends React.Component {
 
@@ -13,32 +14,34 @@ class OnOffField extends React.Component {
         super(props);
     }
 
-	handleChange(on) {
-		console.log(arguments)
-		this.props.onChange(on);
-	}
+    handleChange(on) {
+        this.props.onChange(on);
+    }
 
     render() {
-    	let  t=this;
+        let t = this;
         return (
-        	  <div className={classnames({
-                'tPL10 tPR10 tFBH tFBAC tFS14 tOnOffField ': true,
-                [t.props.className]: !!t.props.className
+            <Field {...t.props} className={classnames('tOnOffField', t.props.className, {
+                'readOnly': t.props.readOnly
             })}>
-                <div className="tMR10 tLH1_3 tFC6 tFieldLabel">{t.props.label}</div>
-                <div className="tFB1"></div>
-                <OnOff on={this.props.on} onChange={this.handleChange.bind(this)} />
-            </div>
+                <div className="tFBH">
+                    <div className="tFB1"></div>
+                    <OnOff on={this.props.on} readOnly={t.props.readOnly} onChange={this.handleChange.bind(this)} />
+                </div>
+            </Field>
         );
     }
 }
 
 OnOffField.defaultProps = {
-}
+    label: ''
+};
 
 // http://facebook.github.io/react/docs/reusable-components.html
 OnOffField.propTypes = {
-	label:React.PropTypes.string.isRequired
-}
+    label: React.PropTypes.string.isRequired
+};
+
+OnOffField.displayName = 'OnOffField';
 
 module.exports = OnOffField;

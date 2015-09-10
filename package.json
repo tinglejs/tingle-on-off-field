@@ -1,12 +1,15 @@
 {
   "name": "tingle-on-off-field",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "The `OnOffField Component` for tinglejs",
   "repository": "https://github.com/tinglejs/tingle-on-off-field.git",
   "author": {
     "name": "ruiyang.dry",
-    "email": ""
+    "email": "rui811216@126.com"
   },
+  "maintainers":[
+    "yize <yize.shc@gmail.com>"
+  ],
   "main": "src/index.js",
   "files": [
     "src",
@@ -21,23 +24,23 @@
   ],
   "dependencies": {
     "classnames": "^2.1.2",
-    "fastclick": "^1.0.6",
-    "react": "^0.13.3",
-    "tingle-context": "latest",
-    "tingle-group-list": "latest",
-    "tingle-on-off": "latest",
-    "tingle-style": "latest",
-    "zepto": "0.0.4"
+    "tingle-context": "~0.1.0",
+    "tingle-on-off": "~0.2.0",
+    "tingle-style": "~0.2.0",
+    "tingle-field": "~0.2.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.19",
     "babel-loader": "^5.3.2",
     "gulp": "^3.9.0",
-    "tingle-dev-tools": "latest"
+    "tingle-dev-tools": "latest",
+    "fastclick": "^1.0.6",
+    "react": "^0.13.3",
+    "tingle-group-list": "~0.2.0"
   },
   "scripts": {
     "start": "gulp d"
   },
   "license": "MIT",
-  "screenshots": "http://gtms02.alicdn.com/tps/i2/TB1x_uQJpXXXXcbXFXXOaDgVVXX-282-128.jpg"
+  "screenshots": "https://img.alicdn.com/tps/TB1r7HSJpXXXXceXFXXXXXXXXXX-750-1254.png"
 }

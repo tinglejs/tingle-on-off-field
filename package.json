@@ -1,6 +1,6 @@
 {
   "name": "tingle-on-off-field",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "The `OnOffField Component` for tinglejs",
   "repository": "https://github.com/tinglejs/tingle-on-off-field.git",
   "author": {

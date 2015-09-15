@@ -1,7 +1,7 @@
 {
   "name": "tingle-on-off-field",
   "version": "0.2.1",
-  "description": "The `OnOffField Component` for tinglejs",
+  "description": "表单开关域。",
   "repository": "https://github.com/tinglejs/tingle-on-off-field.git",
   "author": {
     "name": "ruiyang.dry",
@@ -20,7 +20,11 @@
     "OnOffField",
     "OnOff",
     "switch",
-    "field"
+    "field",
+    "radio",
+    "表单",
+    "开关",
+    "开关域"
   ],
   "dependencies": {
     "classnames": "^2.1.2",
